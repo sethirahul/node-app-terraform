@@ -4,7 +4,7 @@ variable "secret_key" {}
 provider "aws" {
   access_key = "${var.access_key}"
   secret_key = "${var.secret_key}"
-  region     = "us-east-1"
+  region     = "us-west-2"
 }
 
 data "aws_ami" "node_app_ami" {
@@ -20,7 +20,7 @@ data "aws_ami" "node_app_ami" {
     values = ["hvm"]
   }
 
-  owners = ["873657852612"]
+  owners = [""]
 }
 
 resource "aws_launch_configuration" "node_app_lc" {
